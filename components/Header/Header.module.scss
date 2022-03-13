@@ -1,0 +1,23 @@
+@import "../../styles/common.scss";
+
+.header {
+  height: 95vh;
+  position: relative;
+
+  background-image: linear-gradient(
+      rgba($color-blue-dark, 0.5),
+      rgba($color-blue-light, 0.5)
+    ),
+    url(../../images/header/background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 0 0 60% 60%/0 0 20% 20%;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: repeat(4, 95vh);
+  }
+}

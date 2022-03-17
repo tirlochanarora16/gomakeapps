@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
 
-    transform: translateY(-6rem);
+    transform: translateY(-3rem);
 
     position: relative;
 
@@ -34,11 +34,11 @@
 
     &--button {
       position: absolute;
-      bottom: 0;
+      bottom: 4rem;
 
       button {
         color: #fff;
-        padding: 1rem;
+        padding: 1rem 2.5rem;
         text-transform: uppercase;
 
         border: 3px solid #fff;
@@ -46,6 +46,7 @@
         border-radius: 6rem;
 
         font-size: 1.5rem;
+        font-weight: 700;
 
         cursor: pointer;
         transition: all 0.3s;

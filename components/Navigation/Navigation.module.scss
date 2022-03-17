@@ -1,0 +1,92 @@
+@import "../../styles/common.scss";
+
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+
+  &__logo {
+    align-self: center;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+  }
+
+  &__lang {
+    align-self: center;
+    padding: 1rem 2rem;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+
+    select,
+    option {
+      border-radius: 3rem;
+    }
+
+    option {
+      color: #000;
+    }
+
+    select {
+      color: inherit;
+      background-color: transparent;
+      padding: 1rem 2rem;
+      border: none;
+      outline: none;
+    }
+
+    svg {
+      color: inherit;
+      margin-right: -1rem;
+      font-size: 2rem;
+    }
+  }
+
+  &__item {
+    border: none;
+    box-shadow: 0 0.1rem 0.1rem 0.2rem rgba($color-blue-dark, 0.5);
+    background-color: #fff;
+    border-radius: 3rem;
+
+    align-self: center;
+    width: fit-content;
+    margin: auto;
+
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    color: $color-blue-dark;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+
+    &--icon {
+      margin-right: 1rem;
+
+      svg {
+        display: block;
+        margin: auto;
+        color: inherit;
+      }
+    }
+
+    &:hover {
+      background-color: $color-blue-dark;
+      color: #fff;
+    }
+  }
+}

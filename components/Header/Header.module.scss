@@ -5,6 +5,7 @@
   position: relative;
 
   background-image: linear-gradient(
+      90deg,
       rgba($color-blue-dark, 0.5),
       rgba($color-blue-light, 0.5)
     ),
@@ -13,11 +14,11 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  border-radius: 0 0 60% 60%/0 0 20% 20%;
+  border-radius: 0 0 100% 100%/0 0 20% 20%;
 
   &__items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-template-rows: repeat(4, 95vh);
+    grid-template-rows: 95vh;
   }
 }

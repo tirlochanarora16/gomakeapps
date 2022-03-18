@@ -2,9 +2,10 @@ import { Fragment, useEffect, useState } from "react";
 
 import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation/Navigation";
+import Refrence from "../components/Refrence/Refrence";
 
 export default function HomePage() {
-  const [pageHeight, setPageHeight] = useState(null);
+  const [pageHeight, setPageHeight] = useState(0);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -17,18 +18,7 @@ export default function HomePage() {
       <main>
         <Navigation changeNavbar={pageHeight !== 0} />
         <Header />
-        <h2>Hello Woeokfo</h2>
-        <h2>Hello Woeokfo</h2>
-        <h2>Hello Woeokfo</h2>
-        <h2>Hello Woeokfo</h2>
-        <h2>Hello Woeokfo</h2>
-        <h2>Hello Woeokfo</h2>
-        <h2>Hello Woeokfo</h2>
-        <h2>Hello Woeokfo</h2>
-        <h2>Hello Woeokfo</h2>
-        <h2>Hello Woeokfo</h2>
-        <h2>Hello Woeokfo</h2>
-        <h2>Hello Woeokfo</h2>
+        <Refrence />
       </main>
     </Fragment>
   );

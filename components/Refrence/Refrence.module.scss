@@ -1,0 +1,120 @@
+@import "../../styles/common.scss";
+
+.refrence {
+  margin-top: 8rem;
+  padding: 3rem;
+  //   height: 100vh;
+
+  background-image: url(../../images/refrence/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+
+  &__head {
+    grid-column: 1 / -1;
+
+    color: #fff;
+    font-size: 2.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__container {
+    margin-top: 2rem;
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+
+    &--display {
+      width: 80%;
+      margin: auto;
+      padding: 3rem;
+      border-radius: 6rem;
+      background-color: rgba(255, 255, 255, 0.5);
+
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+
+      &-img {
+        align-self: center;
+      }
+
+      &-title {
+        border-radius: 6rem;
+        background-color: #ffffff;
+        // background-image: linear-gradient(
+        //   to left,
+        //   $color-blue-dark,
+        //   $color-blue-light
+        // );
+        // background-clip: text;
+        color: #000;
+
+        align-self: center;
+
+        text-align: center;
+        margin: auto 1rem;
+
+        position: relative;
+
+        padding: 2rem;
+        z-index: 500;
+
+        p {
+          position: relative;
+          z-index: 20;
+          font-size: 2.5rem;
+          font-weight: 500;
+        }
+
+        // &::after {
+        //   content: "hello";
+        //   position: absolute;
+        //   top: 0;
+        //   left: 0;
+        //   width: 90%;
+        //   height: 100%;
+        //   border-radius: 6rem;
+        //   background-image: linear-gradient(
+        //     to left,
+        //     $color-blue-dark,
+        //     $color-blue-light
+        //   );
+        //   background-clip: text;
+        // }
+      }
+
+      &-images {
+        grid-column: 1 / -1;
+
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+      }
+    }
+  }
+
+  &__button {
+    &--back,
+    &--front {
+      color: #fff;
+      align-self: center;
+      padding: 1rem;
+    }
+
+    &--back {
+      margin-left: 2rem;
+    }
+
+    &--front {
+      margin-right: 2rem;
+    }
+  }
+}

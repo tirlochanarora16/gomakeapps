@@ -1,0 +1,22 @@
+@import "../../styles/common.scss";
+
+.button {
+  background-color: #fff;
+  color: $color-blue-dark;
+
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 0.5rem rgba($color-blue-dark, 0.8);
+
+  display: flex;
+  align-items: center;
+
+  font-size: 3rem;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

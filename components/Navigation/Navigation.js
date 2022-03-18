@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Image from "next/image";
 
 import { AiFillHome } from "react-icons/ai";
@@ -8,13 +7,14 @@ import { AiTwotoneThunderbolt } from "react-icons/ai";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { RiCustomerServiceFill } from "react-icons/ri";
 import { FaLanguage } from "react-icons/fa";
+import { navigationMenuItems } from "./NavigationData";
 import logo from "../../images/navigation/logo.png";
 
 import style from "./Navigation.module.scss";
 
 const NavigationItem = (props) => {
   return (
-    <div className={style["navigation__item"]}>
+    <div className={style["navigation__item"]} key={props.id}>
       <div className={style["navigation__item--icon"]}>{props.icon}</div>
       <div className={style["navigation__item--text"]}>
         <p>{props.text}</p>
@@ -33,12 +33,15 @@ const Navigation = (props) => {
         <Image src={logo} alt="go make apps logo" width={85} height={100} />
       </div>
       <div className={style["navigation__list"]}>
-        <NavigationItem icon={<AiFillHome />} text="Accueil" />
+        {navigationMenuItems.map((item) => (
+          <NavigationItem id={item.id} icon={item.icon} text={item.text} />
+        ))}
+        {/* <NavigationItem icon={<AiFillHome />} text="Accueil" />
         <NavigationItem icon={<HiDocumentText />} text="Accueil" />
         <NavigationItem icon={<RiPencilRuler2Fill />} text="Accueil" />
         <NavigationItem icon={<AiTwotoneThunderbolt />} text="Accueil" />
         <NavigationItem icon={<AiFillCheckCircle />} text="Service" />
-        <NavigationItem icon={<RiCustomerServiceFill />} text="Contact" />
+        <NavigationItem icon={<RiCustomerServiceFill />} text="Contact" /> */}
       </div>
       <div className={style["navigation__lang"]}>
         <div style={{ color: props.changeNavbar ? "#000" : "" }}>

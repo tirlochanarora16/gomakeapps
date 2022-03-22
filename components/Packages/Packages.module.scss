@@ -1,0 +1,68 @@
+@import "../../styles/common.scss";
+
+.packages {
+  margin-top: 5rem;
+  height: 100vh;
+
+  position: relative;
+
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    border-radius: 50%;
+    top: 0;
+  }
+
+  &::before {
+    left: 0;
+
+    transform: translateX(-14rem);
+    background-color: $color-green;
+  }
+
+  &::after {
+    right: 0;
+
+    transform: translateX(14rem);
+    background-image: linear-gradient(212deg, #0036ff 0%, #000000 100%);
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 4rem;
+
+      span {
+        background-image: linear-gradient(
+          to left,
+          rgba($color-blue-dark, 0.8),
+          rgba($color-blue-light, 0.8)
+        );
+        background-clip: text;
+        color: transparent;
+      }
+
+      strong {
+        color: $color-blue-dark;
+      }
+    }
+  }
+  &__icon {
+    height: rem;
+    position: relative;
+    margin-right: 1rem;
+
+    & > * {
+      display: block Im !important;
+      height: 100% !important;
+    }
+  }
+}

@@ -21,7 +21,10 @@ const Navigation = (props) => {
   return (
     <nav
       className={style.navigation}
-      style={{ backgroundColor: props.changeNavbar ? "#fff" : "" }}
+      style={{
+        backgroundColor: props.changeNavbar ? "#fff" : "",
+        borderBottom: !props.changeNavbar ? "1px solid transparent" : "",
+      }}
     >
       <div className={style["navigation__logo"]}>
         <Image src={logo} alt="go make apps logo" width={85} height={100} />

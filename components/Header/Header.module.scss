@@ -16,9 +16,21 @@
 
   border-radius: 0 0 100% 100%/0 0 20% 20%;
 
+  // @media only screen and (max-width: 37.5em) {
+  //   border-radius: 0;
+  // }
+
   &__items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 95vh;
+    grid-auto-rows: 1fr;
+
+    // @media only screen and (max-width: 37.5em) {
+    //   height: 100%;
+    //   border: 1px solid red;
+    //   grid-template-columns: repeat(2, 1fr);
+    //   grid-template-rows: repeat(2, 1fr);
+    // }
   }
 }

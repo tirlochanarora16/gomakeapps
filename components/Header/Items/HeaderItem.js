@@ -1,9 +1,12 @@
+import Image from "next/image";
 import style from "./HeaderItem.module.scss";
 
 const HeaderItem = (props) => {
   return (
     <div className={style["header__item"]}>
-      <div className={style["header__item--icon"]}>{props.icon}</div>
+      <div className={style["header__item--icon"]}>
+        <Image src={props.icon} alt={props.text} width={100} height={100} />
+      </div>
       <div className={style["header__item--heading"]}>
         <h1>{props.title}</h1>
       </div>

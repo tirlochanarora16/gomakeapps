@@ -10,6 +10,7 @@
 
   display: grid;
   grid-template-columns: auto 1fr auto;
+  grid-gap: 5rem;
 
   &__logo {
     align-self: center;
@@ -19,8 +20,7 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   }
 
   &__lang {
@@ -57,16 +57,17 @@
 
   &__item {
     border: none;
-    box-shadow: 0 0.1rem 0.1rem 0.2rem rgba($color-blue-dark, 0.5);
+    box-shadow: $box-shadow;
     background-color: #fff;
     border-radius: 3rem;
 
     align-self: center;
-    width: 95%;
+    width: 80%;
     margin: auto;
 
     font-size: 1.4rem;
-    padding: 1rem 3rem;
+    padding: 1rem;
+
     color: $color-blue-dark;
 
     display: flex;
@@ -75,7 +76,8 @@
     transition: all 0.2s;
 
     &--icon {
-      margin-right: 1rem;
+      margin-right: 0.5rem;
+      font-size: 2rem;
 
       svg {
         display: block;

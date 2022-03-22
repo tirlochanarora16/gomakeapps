@@ -2,7 +2,7 @@
 
 .refrence {
   margin-top: 8rem;
-  padding: 10rem 3rem;
+  padding: 12rem 3rem;
 
   background-image: linear-gradient(rgba(#fff, 0), rgba($color-blue-dark, 0.8)),
     url(../../images/refrence/background.png);
@@ -23,6 +23,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
+
+    &--img {
+      margin-right: 2rem;
+    }
   }
 
   &__container {

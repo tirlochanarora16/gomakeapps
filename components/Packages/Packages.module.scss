@@ -2,7 +2,6 @@
 
 .packages {
   margin-top: 5rem;
-  height: 100vh;
 
   position: relative;
 
@@ -56,13 +55,146 @@
     }
   }
   &__icon {
-    height: rem;
     position: relative;
     margin-right: 1rem;
 
     & > * {
-      display: block Im !important;
+      display: block !important;
       height: 100% !important;
+    }
+  }
+
+  // LIST CONTAINER
+  &__container {
+    width: 85%;
+    margin: 3rem auto;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    grid-gap: 1rem;
+  }
+
+  // LIST ITEM
+  &__item {
+    width: 85%;
+    margin: auto;
+    border-radius: $border-radius;
+    overflow: hidden;
+    box-shadow: $box-shadow-grey;
+
+    &--name {
+      background-color: $color-green;
+      padding: 1rem;
+      font-size: 2rem;
+      text-align: center;
+      color: #fff;
+      text-transform: capitalize;
+    }
+
+    &--amount {
+      text-align: center;
+
+      &-divider {
+        width: 60%;
+        margin: auto;
+        height: 0.25rem;
+        border-radius: 6rem;
+        background-color: $color-blue-dark;
+      }
+
+      &-monthly {
+        p {
+          color: $color-blue-dark;
+          &:first-child {
+            font-size: 2.5rem;
+            font-weight: bold;
+          }
+
+          &:last-child {
+            font-size: 1.75rem;
+            font-weight: 500;
+          }
+        }
+      }
+
+      &-once {
+        width: 50%;
+        margin: 1rem auto;
+
+        font-size: 1.7rem;
+        color: $color-blue-dark;
+      }
+    }
+
+    &--container {
+      padding: 3rem 1rem;
+      border-bottom: 6rem;
+    }
+
+    &--list {
+      width: 90%;
+      margin: 3rem auto;
+
+      &-text {
+        flex: 4;
+        margin-left: 2rem;
+        p {
+          color: $color-blue-dark;
+
+          font-size: 1.25rem;
+          font-weight: 600;
+        }
+      }
+
+      &-item {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    &-button {
+      width: fit-content;
+      padding: 1.5rem 4rem;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow-dark;
+
+      color: $color-blue-dark;
+
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+
+      display: block;
+      margin: auto;
+      a {
+        &:link,
+        &:visited {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &-icons {
+      margin-top: 3rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & > * {
+        &:not(:last-child) {
+          margin-right: 1rem !important;
+        }
+      }
     }
   }
 }

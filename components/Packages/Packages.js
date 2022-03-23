@@ -108,8 +108,8 @@ const PackagesItem = (props) => {
           <Link href="#">Buy Now</Link>
         </div>
         <div className={style["packages__item-icons"]}>
-          {props.icons.map((icon) => (
-            <Image src={icon.icon} width={25} height={25} />
+          {props.icons.map((icon, index) => (
+            <Image src={icon.icon} key={index} width={25} height={25} />
           ))}
         </div>
       </div>

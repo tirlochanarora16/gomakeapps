@@ -42,8 +42,12 @@ const PackagesListItem = (props) => {
 
 const PackagesItem = (props) => {
   const styles = {
-    backgroundColor: props.packageName === "privilege" ? "#0141f8" : "",
-    backgroundColor: props.packageName === "unlimited" ? "#000" : "",
+    backgroundColor:
+      props.packageName === "privilege"
+        ? "#0141f8"
+        : props.packageName === "unlimited"
+        ? "#000"
+        : "",
     marginTop: props.packageName === "unlimited" ? "1rem" : "",
   };
 

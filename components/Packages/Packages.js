@@ -144,7 +144,7 @@ const Packages = () => {
           monthlyAmount="4500,00 € / mois"
           timePeriod="1 an d'engagement"
           oneTimeAmount="ou 49 500,00 € en une seule fois"
-          packageItems={premiumPackageItems}
+          packageItems={privilegeAndunlimitedPackageItems}
           icons={[
             { id: 1, icon: monitor.src },
             { id: 2, icon: smartphone.src },

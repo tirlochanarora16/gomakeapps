@@ -1,9 +1,11 @@
 import { Fragment, useEffect, useState } from "react";
+import Reviews from "../components/Reviews/Reviews";
 
 import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation/Navigation";
 import Packages from "../components/Packages/Packages";
 import Refrence from "../components/Refrence/Refrence";
+import Services from "../components/Services/Services";
 
 export default function HomePage() {
   const [pageHeight, setPageHeight] = useState(0);
@@ -21,6 +23,8 @@ export default function HomePage() {
         <Header />
         <Refrence />
         <Packages />
+        <Services />
+        <Reviews />
       </main>
     </Fragment>
   );

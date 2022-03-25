@@ -1,0 +1,80 @@
+@import "../../styles/common.scss";
+
+.reviews {
+  margin-top: 4rem;
+  padding: 8rem 5rem;
+  border-radius: 100% 100% 100% 100%/40% 40% 40% 40%;
+
+  background-image: linear-gradient(
+      rgba($color-blue-light, 0.3),
+      rgba($color-blue-dark, 0.8)
+    ),
+    url(../../images/reviews/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      margin-top: 1rem;
+      font-size: 3rem;
+      color: #fff;
+    }
+  }
+
+  &__container {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-gap: 2rem;
+  }
+
+  &__button {
+    &--back {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      align-self: center;
+      justify-self: center;
+      border-radius: 50%;
+    }
+
+    &--forward {
+      grid-column: 3 / -1;
+      grid-row: 2 / 3;
+      align-self: center;
+      justify-self: center;
+      border-radius: 50%;
+    }
+  }
+
+  &__user {
+    padding: 3rem;
+    border-radius: $border-radius/2;
+    background-color: #fff;
+
+    margin: auto;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    &-review {
+      p {
+        font-size: 2rem;
+      }
+    }
+
+    &-name {
+      background-image: linear-gradient($color-blue-light, $color-blue-dark);
+      text-align: center;
+      background-clip: text;
+      color: transparent;
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

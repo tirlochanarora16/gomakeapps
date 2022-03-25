@@ -1,0 +1,70 @@
+@import "../../styles/common.scss";
+
+.services {
+  margin-top: 4rem;
+  padding: 5rem;
+  height: 98vh;
+
+  position: relative;
+
+  background-image: url(../../images/services/background2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+
+    h1 {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 4.5rem;
+      margin-left: 1rem;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+  }
+
+  &__item {
+    padding: 2rem;
+    align-self: end;
+
+    h2 {
+      font-size: 3rem;
+      color: #fff;
+      text-align: center;
+    }
+
+    &--button {
+      margin-top: 1.5rem;
+
+      a {
+        &:link,
+        &:visited {
+          font-size: 1.75rem;
+          font-weight: 700;
+
+          background-color: #fff;
+          border-radius: $border-radius;
+
+          display: block;
+          margin: auto;
+          width: fit-content;
+          padding: 1rem 2rem;
+
+          color: $color-blue-dark;
+          text-decoration: none;
+          border: 1px solid white;
+        }
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@ const FormCallButton = () => {
         <FiPhoneCall />
       </div>
       <div className={style["form__contact--text"]}>
-        <Link href="#">Appler l'agence</Link>
+        <Link href="#">Appler l&#39;agence</Link>
       </div>
     </div>
   );
@@ -33,7 +33,7 @@ const ContactForm = () => {
       </div>
       <p>
         Vous avez un projet de développement informatique ? Une idée
-        d'application Mobile ? N'hésitez pas a nous contacter !
+        d&#39;application Mobile ? N&#39;hésitez pas a nous contacter !
       </p>
       <p>
         Vous pouvez joindre GOMAKEAPPS au +33 (0)7 50 50 21 31 ou en remplissant

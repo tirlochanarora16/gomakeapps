@@ -1,0 +1,56 @@
+@import "../../styles/common.scss";
+
+.form {
+  background-color: #e2e2e2;
+  height: 100vh;
+  margin-top: -12rem;
+
+  padding: 16rem 12rem;
+
+  &__contact {
+    border-radius: 6rem;
+    padding: 2.75rem 3rem;
+    width: fit-content;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+    box-shadow: $box-shadow;
+
+    cursor: pointer;
+
+    &--icon {
+      margin-right: 1rem;
+      color: $color-blue-dark;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        fill: $color-blue-dark;
+        font-size: 2rem;
+      }
+    }
+
+    &--text {
+      font-size: 2rem;
+      background-image: linear-gradient(
+        rgba($color-blue-light, 0.8),
+        rgba($color-blue-dark, 0.8)
+      );
+      background-clip: text;
+
+      a {
+        &:link,
+        &:visited {
+          text-decoration: none;
+          font-weight: 700;
+          color: transparent;
+        }
+      }
+    }
+  }
+}

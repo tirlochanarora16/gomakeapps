@@ -6,6 +6,7 @@ import Navigation from "../components/Navigation/Navigation";
 import Packages from "../components/Packages/Packages";
 import Refrence from "../components/Refrence/Refrence";
 import Services from "../components/Services/Services";
+import Form from "../components/Form/Form";
 
 export default function HomePage() {
   const [pageHeight, setPageHeight] = useState(0);
@@ -25,6 +26,7 @@ export default function HomePage() {
         <Packages />
         <Services />
         <Reviews />
+        <Form />
       </main>
     </Fragment>
   );

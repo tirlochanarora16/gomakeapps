@@ -1,0 +1,55 @@
+.footer {
+  width: 80%;
+  margin: 4rem auto;
+  padding: 2rem 0;
+
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+  h3,
+  ul,
+  p {
+    color: #666;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  ul {
+    list-style: none;
+    font-size: 1.75rem;
+
+    li {
+      padding: 0.75rem 0;
+    }
+  }
+
+  &__society {
+    justify-self: center;
+    align-self: center;
+
+    transform: translateY(6rem);
+
+    h3 {
+      text-align: center;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    &--img {
+      width: fit-content;
+      margin: auto;
+
+      & > * {
+        display: block !important;
+        margin: auto !important;
+      }
+    }
+  }
+}

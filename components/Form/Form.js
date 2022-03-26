@@ -20,6 +20,15 @@ const FormCallButton = () => {
   );
 };
 
+const FormInput = ({ type, placeholder, id, label }) => {
+  return (
+    <div className={style[`form__contactForm--form-input`]}>
+      <label htmlFor={id}>{label}</label>
+      <input type={type} placeholder={placeholder} id={id} required />
+    </div>
+  );
+};
+
 const ContactForm = () => {
   return (
     <div className={style["form__contactForm"]}>
@@ -31,16 +40,61 @@ const ContactForm = () => {
           alt="go make apps offical logo"
         />
       </div>
-      <p>
-        Vous avez un projet de développement informatique ? Une idée
-        d&#39;application Mobile ? N&#39;hésitez pas a nous contacter !
-      </p>
-      <p>
-        Vous pouvez joindre GOMAKEAPPS au +33 (0)7 50 50 21 31 ou en remplissant
-        un de nos formulaires. Nous prendrons contact avec vous dans les
-        24heures.
-      </p>
-      <div className={style["form__contactForm--form"]}></div>
+      <div className={style["form__contactForm--para"]}>
+        <p>
+          Vous avez un projet de développement informatique ? Une idée
+          d&#39;application Mobile ? N&#39;hésitez pas a nous contacter !
+        </p>
+        <p>
+          Vous pouvez joindre GOMAKEAPPS au +33 (0)7 50 50 21 31 ou en
+          remplissant un de nos formulaires. Nous prendrons contact avec vous
+          dans les 24heures.
+        </p>
+      </div>
+
+      <div className={style["form__contactForm--text"]}>
+        <h2>Contactez-nous</h2>
+      </div>
+      <div className={style["form__contactForm--form"]}>
+        <form>
+          <div className={style["form__contactForm--form-name"]}>
+            <FormInput
+              type="text"
+              placeholder="Entrez votre nom"
+              id="name"
+              label="Votre nom"
+            />
+          </div>
+          <div className={style["form__contactForm--form-phone"]}>
+            <FormInput
+              type="tel"
+              placeholder="Entrez vos coordonées"
+              id="phone"
+              label="Votre numéro de téléphone"
+            />
+          </div>
+          <div className={style["form__contactForm--form-email"]}>
+            <FormInput
+              type="email"
+              placeholder="Entrez votre adresse e-mail"
+              id="email"
+              label="Votre e-mail"
+            />
+          </div>
+
+          <div className={style["form__contactForm--form-textarea"]}>
+            <label htmlFor="Message">Message</label>
+            <textarea
+              id="message"
+              placeholder="Entrez votre message"
+              rows={7}
+            ></textarea>
+          </div>
+          <div className={style["form__contactForm--form-button"]}>
+            <button>ENVOYER</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

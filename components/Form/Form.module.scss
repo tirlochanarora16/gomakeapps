@@ -2,7 +2,6 @@
 
 .form {
   background-color: #e2e2e2;
-  height: 100vh;
   margin-top: -12rem;
 
   padding: 16rem 12rem;
@@ -49,6 +48,139 @@
           text-decoration: none;
           font-weight: 700;
           color: transparent;
+        }
+      }
+    }
+  }
+
+  &__contactForm {
+    margin-top: 10rem;
+    padding: 4rem;
+    background-color: #fff;
+    box-shadow: $box-shadow-grey;
+    border-radius: $border-radius;
+
+    &--img {
+      width: fit-content;
+      margin: -10rem auto 0 auto;
+
+      & > * {
+        display: block !important;
+      }
+    }
+
+    &--para {
+      width: 80%;
+      margin: 2rem auto;
+      text-align: center;
+
+      line-height: 2;
+
+      font-size: 1.4rem;
+
+      p {
+        &:first-child {
+          font-weight: bold;
+        }
+
+        &:last-child {
+          color: #666;
+        }
+      }
+    }
+
+    &--text {
+      width: 80%;
+      margin: auto;
+      font-size: 2rem;
+
+      background-image: linear-gradient(
+        90deg,
+        rgba($color-blue-dark, 0.7),
+        rgba($color-blue-dark, 1)
+      );
+
+      background-clip: text;
+      color: transparent;
+    }
+
+    &--form {
+      width: 80%;
+      margin: 2rem auto;
+
+      form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 1rem;
+      }
+
+      &-name {
+        grid-column: 1/ 2;
+      }
+
+      &-phone {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+
+      &-email {
+        grid-column: 1 / -1;
+      }
+
+      &-textarea {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+      }
+
+      &-button {
+        grid-row: 4 / 5;
+
+        button {
+          padding: 2rem 3rem;
+          outline: none;
+          border: none;
+          border-radius: $border-radius;
+          background-image: linear-gradient(
+            120deg,
+            rgba($color-blue-dark, 0.7),
+            rgba($color-blue-dark, 1)
+          );
+          color: #fff;
+          font-size: 1.5rem;
+          transition: all 0.2s;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+
+      &-input,
+      &-textarea {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+
+        padding: 1rem;
+
+        label {
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+          color: #666;
+        }
+
+        input,
+        textarea {
+          padding: 1rem;
+          padding-left: 0;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #5f5f5f;
+        }
+
+        textarea {
+          resize: none;
         }
       }
     }

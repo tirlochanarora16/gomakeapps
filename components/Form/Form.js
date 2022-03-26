@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { FiPhoneCall } from "react-icons/fi";
+import { AiFillFacebook, AiFillYoutube, AiFillInstagram } from "react-icons/ai";
 
 import logo from "../../images/form/logo.png";
 
@@ -99,11 +100,34 @@ const ContactForm = () => {
   );
 };
 
+const SocialMedia = () => {
+  return (
+    <div className={style["form__socialMedia"]}>
+      <h2>Retrouvez nous sur les réseaux sociaux !</h2>
+      <div className={style["form__socialMedia--icons"]}>
+        <div className={style["form__socialMedia--icon"]}>
+          <AiFillFacebook />
+          <Link href="#">Facebook</Link>
+        </div>
+        <div className={style["form__socialMedia--icon"]}>
+          <AiFillYoutube />
+          <Link href="#">YouTube</Link>
+        </div>
+        <div className={style["form__socialMedia--icon"]}>
+          <AiFillInstagram />
+          <Link href="#">Instagram</Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Form = () => {
   return (
     <section className={style.form}>
       <FormCallButton />
       <ContactForm />
+      <SocialMedia />
     </section>
   );
 };

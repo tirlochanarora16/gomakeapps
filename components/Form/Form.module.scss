@@ -5,6 +5,7 @@
   margin-top: -12rem;
 
   padding: 16rem 12rem;
+  padding-bottom: 4rem;
 
   &__contact {
     border-radius: 6rem;
@@ -182,6 +183,59 @@
         textarea {
           resize: none;
         }
+      }
+    }
+  }
+
+  &__socialMedia {
+    padding: 2rem;
+    width: 80%;
+    margin: 4rem auto;
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    &--icons {
+      margin-top: 4rem;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-gap: 2rem;
+    }
+
+    &--icon {
+      padding: 2rem;
+      border-radius: $border-radius;
+      background-color: #fff;
+      box-shadow: $box-shadow-grey;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        background-image: linear-gradient(
+          90deg,
+          rgba($color-blue-dark, 0.7),
+          rgba($color-blue-dark, 1)
+        );
+        background-clip: text;
+        &:link,
+        &:visited {
+          color: transparent;
+          font-size: 2rem;
+          font-weight: 700;
+          text-decoration: none;
+        }
+      }
+
+      svg {
+        fill: $color-blue-dark;
+        display: block;
+        font-size: 5rem;
       }
     }
   }

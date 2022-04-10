@@ -47,9 +47,9 @@ const Cta = (props) => {
       <div className={style["cta__text"]}>
         <p>
           Remplissez le formulaire pour obtenir un ordre de prix et un de nos
-          experts vous contactera pour l'élaboration de votre projet. Nous avons
-          hâte de vous rejoindre dans votre nouvelle aventure ! Demandez un
-          devis
+          experts vous contactera pour l&#39;élaboration de votre projet. Nous
+          avons hâte de vous rejoindre dans votre nouvelle aventure ! Demandez
+          un devis
         </p>
       </div>
     </div>

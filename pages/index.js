@@ -8,6 +8,7 @@ import Refrence from "../components/Refrence/Refrence";
 import Services from "../components/Services/Services";
 import Form from "../components/Form/Form";
 import Footer from "../components/Footer/Footer";
+import Cta from "../components/CTA/Cta";
 
 export default function HomePage() {
   const [pageHeight, setPageHeight] = useState(0);
@@ -23,9 +24,11 @@ export default function HomePage() {
       <main>
         <Navigation changeNavbar={pageHeight !== 0} />
         <Header />
+        <Cta />
         <Refrence />
         <Packages />
         <Services />
+        <Cta marginTop="-8rem" />
         <Reviews />
         <Form />
       </main>

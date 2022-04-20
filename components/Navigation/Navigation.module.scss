@@ -13,6 +13,8 @@
   grid-template-columns: auto 1fr auto;
   grid-gap: 5rem;
 
+  padding: 0 2rem;
+
   &__logo {
     align-self: center;
     width: fit-content;
@@ -20,8 +22,10 @@
   }
 
   &__list {
+    width: 90%;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   }
 
   &__lang {
@@ -63,11 +67,11 @@
     border-radius: 3rem;
 
     align-self: center;
-    width: 80%;
+    width: fit-content;
     margin: auto;
 
-    font-size: 1.4rem;
-    padding: 1rem;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
 
     color: $color-blue-dark;
 

@@ -9,6 +9,7 @@ import Services from "../components/Services/Services";
 import Form from "../components/Form/Form";
 import Footer from "../components/Footer/Footer";
 import Cta from "../components/CTA/Cta";
+import CtaProvider from "../components/CTA/ctaContext";
 
 export default function HomePage() {
   const [pageHeight, setPageHeight] = useState(0);
@@ -22,15 +23,17 @@ export default function HomePage() {
   return (
     <Fragment>
       <main>
-        <Navigation changeNavbar={pageHeight !== 0} />
-        <Header />
-        <Cta />
-        <Refrence />
-        <Packages />
-        <Services />
-        <Cta marginTop="-8rem" />
-        <Reviews />
-        <Form />
+        <CtaProvider>
+          <Navigation changeNavbar={pageHeight !== 0} />
+          <Header />
+          <Cta />
+          <Refrence />
+          <Packages />
+          <Services />
+          <Cta marginTop="-8rem" />
+          <Reviews />
+          <Form />
+        </CtaProvider>
       </main>
       <Footer />
     </Fragment>

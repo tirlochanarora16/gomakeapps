@@ -15,8 +15,6 @@ const Cta = (props) => {
   const { currentCtaNumber, setCurrentCtaNumber, currentFormData } =
     useContext(CtaContext);
 
-  console.log(currentFormData);
-
   // function to increment the "currentCtaNumber" on the click of the button
   const incrementCtaPageHandler = () =>
     setCurrentCtaNumber((currentCtaNumber += 1));

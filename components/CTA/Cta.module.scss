@@ -47,10 +47,12 @@
     margin: 2rem auto;
 
     &--button {
-      grid-column: 1 / -1;
-      justify-self: center;
       button {
-        width: 100%;
+        display: block;
+        min-width: 30%;
+        margin: auto;
+        margin-top: 1.5rem;
+
         color: #fff;
 
         padding: 2rem 4rem;
@@ -85,10 +87,6 @@
     }
 
     form {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-      grid-gap: 2rem;
-
       input {
         display: block;
 
@@ -102,6 +100,36 @@
         padding: 2rem;
         background-color: #c4d1ff;
       }
+    }
+  }
+
+  &__basicDetails,
+  &__textarea {
+    display: grid;
+
+    grid-gap: 2rem;
+  }
+
+  &__basicDetails {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+
+  &__textarea {
+    grid-template-columns: repeat(auto-fit, minmax(60%, 1fr));
+    p {
+      justify-self: center;
+      color: #0039ff;
+      font-size: 1.75rem;
+      font-weight: 600;
+    }
+
+    textarea {
+      padding: 3rem;
+      outline: none;
+      border: none;
+      background-color: #c4d1ff;
+      border-radius: $border-radius;
+      resize: none;
     }
   }
 

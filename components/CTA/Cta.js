@@ -24,6 +24,9 @@ const Cta = (props) => {
   // variable to hold cta text
   let ctaText = "";
 
+  // setting the boolean of whether the current page number is 0
+  const isInitialPage = currentCtaNumber === 0;
+
   // changing the CTA text based on page number,
   if (currentCtaNumber === 0) {
     ctaText =
@@ -40,7 +43,7 @@ const Cta = (props) => {
     >
       <div className={style["cta__head"]}>
         {/* conditional rendering of the logo (only for page 0) */}
-        {currentCtaNumber === 0 && (
+        {isInitialPage && (
           <Image src={logo} alt="go make apps logo" width={70} height={120} />
         )}
         <h1>
@@ -49,13 +52,25 @@ const Cta = (props) => {
       </div>
       <div className={style["cta__form"]}>
         <form>
-          {currentCtaNumber === 0 && <CTABasicDetails />}
-          {currentCtaNumber === 1 && <CtaTextArea />}
+          <div className={style["cta__basicDetails"]}>
+            {isInitialPage && <CTABasicDetails />}
+          </div>
+          <div className={style["cta__textarea"]}>
+            {currentCtaNumber === 1 && <CtaTextArea />}
+          </div>
           <div className={style["cta__form--button"]}>
-            <button type="button" onClick={incrementCtaPageHandler}>
-              Commencer
+            <button
+              type="button"
+              onClick={incrementCtaPageHandler}
+              style={{
+                backgroundImage: !isInitialPage
+                  ? "linear-gradient(#0039ff,  #0039ff)"
+                  : "",
+              }}
+            >
+              {currentCtaNumber === 0 ? "Commencer" : "Suivant"}
             </button>
-            <p>Accéder au formulaire</p>
+            {isInitialPage && <p>Accéder au formulaire</p>}
           </div>
         </form>
       </div>

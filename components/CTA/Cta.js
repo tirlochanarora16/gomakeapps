@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Image from "next/image";
 
-import { CtaContext } from "./ctaContext";
+import { CtaContext } from "../../context/ctaContext";
 import CTABasicDetails from "./CTABasicDetails"; // component for Page 0.
 import CtaTextArea from "./CTATextArea"; // component for page 1.
 

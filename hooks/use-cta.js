@@ -1,6 +1,6 @@
 import react, { useContext } from "react";
 
-import { CtaContext } from "../components/CTA/ctaContext";
+import { CtaContext } from "../context/ctaContext";
 
 const useCta = () => {
   // importing the context variables and functions

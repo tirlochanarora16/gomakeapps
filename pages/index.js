@@ -9,7 +9,7 @@ import Services from "../components/Services/Services";
 import Form from "../components/Form/Form";
 import Footer from "../components/Footer/Footer";
 import Cta from "../components/CTA/Cta";
-import CtaProvider from "../components/CTA/ctaContext";
+import CtaProvider from "../context/ctaContext";
 
 export default function HomePage() {
   const [pageHeight, setPageHeight] = useState(0);

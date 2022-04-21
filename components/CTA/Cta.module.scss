@@ -116,12 +116,6 @@
 
   &__textarea {
     grid-template-columns: repeat(auto-fit, minmax(60%, 1fr));
-    p {
-      justify-self: center;
-      color: #0039ff;
-      font-size: 1.75rem;
-      font-weight: 600;
-    }
 
     textarea {
       padding: 3rem;
@@ -131,6 +125,13 @@
       border-radius: $border-radius;
       resize: none;
     }
+  }
+
+  p.cta__question {
+    justify-self: center;
+    color: #0039ff;
+    font-size: 1.75rem;
+    font-weight: 600;
   }
 
   &__text {

@@ -1,22 +1,10 @@
-import { useContext } from "react";
-import { CtaContext } from "./ctaContext";
-
 import style from "./Cta.module.scss";
+import useCta from "../../hooks/use-cta";
 
 // component for CTA Input
 const CtaFormInput = ({ type, placeholder, id }) => {
-  // importing all the required required variables and functions from the "CtaContext"
-  const { setCurrentFormData } = useContext(CtaContext);
-
-  const inputChangeHandler = (event) => {
-    // fetching the current form id and it's value
-    const { id: targetId, value: targetValue } = event.target;
-
-    // updating the form state by updating it's values
-    setCurrentFormData((previousFormState) => {
-      return { ...previousFormState, [targetId]: targetValue };
-    });
-  };
+  // using the "useCta" hook to capture the form data
+  const inputChangeHandler = useCta();
 
   return (
     <div className={style["cta__form--input"]}>

@@ -12,8 +12,7 @@ import style from "./Cta.module.scss";
 // main CTA component which combines all other components
 const Cta = (props) => {
   // importing all the required required variables and functions from the "CtaContext"
-  const { currentCtaNumber, setCurrentCtaNumber, currentFormData } =
-    useContext(CtaContext);
+  const { currentCtaNumber, setCurrentCtaNumber } = useContext(CtaContext);
 
   // function to increment the "currentCtaNumber" on the click of the button
   const incrementCtaPageHandler = () =>

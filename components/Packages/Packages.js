@@ -29,7 +29,7 @@ const PackagesListItem = (props) => {
           filter: props.package === "privilege" ? "brightness(0%)" : "",
         }}
       >
-        <Image src={props.icon} width={20} height={20} />
+        <Image alt="package icon" src={props.icon} width={20} height={20} />
       </div>
       <div className={style["packages__item--list-text"]}>
         <p style={colorStyle}>{props.text}</p>

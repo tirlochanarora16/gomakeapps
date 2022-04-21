@@ -20,7 +20,7 @@ const CtaFormInput = ({ type, placeholder, id }) => {
 };
 
 // component that will be rendered on page 0.
-const CTABasicDetails = () => {
+const CtaBasicDetails = () => {
   return (
     <>
       <CtaFormInput type="text" id="name" placeholder="Nom" />
@@ -31,4 +31,4 @@ const CTABasicDetails = () => {
   );
 };
 
-export default CTABasicDetails;
+export default CtaBasicDetails;

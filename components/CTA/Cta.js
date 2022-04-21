@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Image from "next/image";
 
 import { CtaContext } from "../../context/ctaContext";
-import CTABasicDetails from "./CtaBasicDetails"; // component for Page 0.
+import CtaBasicDetails from "./CtaBasicDetails"; // component for Page 0.
 import CtaTextArea from "./CtaTextArea"; // component for page 1.
 import CtaProjectNeeds from "./CtaProjectNeeds"; // component for page 2.
 
@@ -51,7 +51,7 @@ const Cta = (props) => {
       <div className={style["cta__form"]}>
         <form>
           <div className={style["cta__basicDetails"]}>
-            {isInitialPage && <CTABasicDetails />}
+            {isInitialPage && <CtaBasicDetails />}
           </div>
           <div className={style["cta__textarea"]}>
             {currentCtaNumber === 1 && <CtaTextArea />}

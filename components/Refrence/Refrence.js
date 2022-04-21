@@ -20,7 +20,7 @@ const Refrence = () => {
     <section className={style.refrence}>
       <div className={style["refrence__head"]}>
         <div className={style["refrence__head--img"]}>
-          <Image src={ruler} width={45} height={45} />
+          <Image alt="ruler" src={ruler} width={45} height={45} />
         </div>
         <h1>NOS CAS D&#39;ÉTUDES DE RÉFÉRENCE</h1>
       </div>

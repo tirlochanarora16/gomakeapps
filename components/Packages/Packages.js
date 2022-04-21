@@ -113,7 +113,13 @@ const PackagesItem = (props) => {
         </div>
         <div className={style["packages__item-icons"]}>
           {props.icons.map((icon, index) => (
-            <Image src={icon.icon} key={index} width={25} height={25} />
+            <Image
+              alt="gomakeapps items icons"
+              src={icon.icon}
+              key={index}
+              width={25}
+              height={25}
+            />
           ))}
         </div>
       </div>

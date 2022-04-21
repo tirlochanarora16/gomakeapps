@@ -2,8 +2,9 @@ import { useContext } from "react";
 import Image from "next/image";
 
 import { CtaContext } from "../../context/ctaContext";
-import CTABasicDetails from "./CTABasicDetails"; // component for Page 0.
-import CtaTextArea from "./CTATextArea"; // component for page 1.
+import CTABasicDetails from "./CtaBasicDetails"; // component for Page 0.
+import CtaTextArea from "./CtaTextArea"; // component for page 1.
+import CtaProjectNeeds from "./CtaProjectNeeds"; // component for page 2.
 
 import logo from "../../images/form/logo.png";
 
@@ -28,7 +29,7 @@ const Cta = (props) => {
   if (currentCtaNumber === 0) {
     ctaText =
       "Remplissez le formulaire pour obtenir un ordre de prix et un de nos experts vous contactera pour l&#39;élaboration de votre projet. Nous avons hâte de vous rejoindre dans votre nouvelle aventure ! Demandez un devis";
-  } else if (currentCtaNumber === 1) {
+  } else {
     ctaText =
       "Remplissez le formulaire pour obtenir un ordre de prix et un de nos experts vous contactera pour l’élaboration de votre projet. Nous avons hâte de vous rejoindre dans votre nouvelle aventure !";
   }
@@ -54,6 +55,9 @@ const Cta = (props) => {
           </div>
           <div className={style["cta__textarea"]}>
             {currentCtaNumber === 1 && <CtaTextArea />}
+          </div>
+          <div className={style["cta__projectNeeds"]}>
+            {currentCtaNumber === 2 && <CtaProjectNeeds />}
           </div>
           <div className={style["cta__form--button"]}>
             <button

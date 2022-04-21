@@ -88,11 +88,6 @@
 
     form {
       input {
-        display: block;
-
-        width: 80%;
-        margin: auto;
-
         border: none;
         border-radius: 3rem;
         outline: none;
@@ -110,10 +105,19 @@
     grid-gap: 2rem;
   }
 
+  // page 0
   &__basicDetails {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    input {
+      display: block;
+
+      width: 80%;
+      margin: auto;
+    }
   }
 
+  // page 1
   &__textarea {
     grid-template-columns: repeat(auto-fit, minmax(60%, 1fr));
 
@@ -127,6 +131,36 @@
     }
   }
 
+  //page 2
+  &__projectNeeds {
+    &--container {
+      margin: 3rem 0;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      grid-gap: 2rem;
+    }
+
+    &--item {
+      display: flex;
+      align-items: center;
+
+      padding: 1rem;
+
+      input[type="checkbox"] {
+        width: 2rem;
+        height: 1.75rem;
+      }
+
+      label {
+        color: #0039ff;
+        margin-left: 0.5rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  // cta question and text
   p.cta__question {
     justify-self: center;
     color: #0039ff;

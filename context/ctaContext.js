@@ -9,6 +9,12 @@ const CtaProvider = ({ children }) => {
     company: "",
     email: "",
     description: "",
+    mobileApplications: false,
+    animatedVideos: false,
+    webPlatforms: false,
+    graphicDesign: false,
+    webRedesign: false,
+    seo: false,
   });
   const [currentCtaNumber, setCurrentCtaNumber] = useState(0);
 

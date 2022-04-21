@@ -9,7 +9,7 @@ const useCta = () => {
   //   console.log(currentFormData);
 
   return (event) => {
-    // extracting out the id and the value of the textarea.
+    // extracting out the id and the value of the input field.
     const { id: targetId, value: targetValue } = event.target;
 
     // updating the form state.

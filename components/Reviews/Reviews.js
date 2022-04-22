@@ -5,7 +5,7 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import star from "../../images/reviews/star.png";
 import Button from "../UI/Button";
 
-import style from "./Reviews.module.scss";
+import style from "../../styles/components/Reviews.module.scss";
 
 const Reviews = () => {
   return (

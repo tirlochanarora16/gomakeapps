@@ -2,7 +2,7 @@ import HeaderItem from "./Items/HeaderItem";
 
 import { headerNavigationData } from "./HeaderData";
 
-import style from "./Header.module.scss";
+import style from "../../styles/components/Header.module.scss";
 
 const Header = () => {
   return (

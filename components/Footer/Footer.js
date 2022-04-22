@@ -1,7 +1,7 @@
 import Image from "next/image";
 import logo from "../../images/footer/logo.png";
 
-import style from "./Footer.module.scss";
+import style from "../../styles/components/Footer.module.scss";
 
 const FooterListItems = ({ items }) => {
   return (

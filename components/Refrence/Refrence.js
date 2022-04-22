@@ -13,7 +13,7 @@ import phone4 from "../../images/refrence/phone4.png";
 import ruler from "../../images/refrence/ruler.png";
 import logo from "../../images/navigation/logo.png";
 
-import style from "./Refrence.module.scss";
+import style from "../../styles/components/Refrence.module.scss";
 
 const Refrence = () => {
   return (

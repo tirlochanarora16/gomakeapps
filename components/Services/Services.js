@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import check from "../../images/services/check.png";
 
-import style from "./Services.module.scss";
+import style from "../../styles/components/Services.module.scss";
 
 const ServiceItem = (props) => {
   return (

@@ -6,7 +6,7 @@ import { AiFillFacebook, AiFillYoutube, AiFillInstagram } from "react-icons/ai";
 
 import logo from "../../images/form/logo.png";
 
-import style from "./Form.module.scss";
+import style from "../../styles/components/Form.module.scss";
 
 const FormCallButton = () => {
   return (

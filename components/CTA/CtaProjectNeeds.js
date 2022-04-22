@@ -1,5 +1,5 @@
 import useCta from "../../hooks/use-cta";
-import style from "./Cta.module.scss";
+import style from "../../styles/components/Cta.module.scss";
 
 const CtaProjectNeedsInput = ({ id, label }) => {
   const inputChangeHandler = useCta();

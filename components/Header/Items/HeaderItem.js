@@ -1,5 +1,5 @@
 import Image from "next/image";
-import style from "./HeaderItem.module.scss";
+import style from "../../../styles/components/HeaderItem.module.scss";
 
 const HeaderItem = (props) => {
   return (

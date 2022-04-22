@@ -1,4 +1,4 @@
-import style from "./Cta.module.scss";
+import style from "../../styles/components/Cta.module.scss";
 import useCta from "../../hooks/use-cta";
 
 // component for CTA Input

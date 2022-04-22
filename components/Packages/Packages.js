@@ -10,7 +10,7 @@ import smartwatch from "../../images/icons/smartwatch.svg";
 
 import { premiumPackageItems, privilegeAndunlimitedPackageItems } from "./data";
 
-import style from "./Packages.module.scss";
+import style from "../../styles/components/Packages.module.scss";
 
 const PackagesListItem = (props) => {
   const colorStyle = {

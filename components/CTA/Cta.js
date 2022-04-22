@@ -8,7 +8,7 @@ import CtaProjectNeeds from "./CtaProjectNeeds"; // component for page 2.
 
 import logo from "../../images/form/logo.png";
 
-import style from "./Cta.module.scss";
+import style from "../../styles/components/Cta.module.scss";
 
 // main CTA component which combines all other components
 const Cta = (props) => {

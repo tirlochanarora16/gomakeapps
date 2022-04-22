@@ -4,7 +4,7 @@ import { FaLanguage } from "react-icons/fa";
 import { navigationMenuItems } from "./NavigationData";
 import logo from "../../images/navigation/logo.png";
 
-import style from "./Navigation.module.scss";
+import style from "../../styles/components/Navigation.module.scss";
 
 const NavigationItem = (props) => {
   return (

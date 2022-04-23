@@ -15,6 +15,7 @@ const CtaProvider = ({ children }) => {
     graphicDesign: false,
     webRedesign: false,
     seo: false,
+    mobileApplicationsCount: { android: 0, ios: 0 },
   });
   const [currentCtaNumber, setCurrentCtaNumber] = useState(0);
 

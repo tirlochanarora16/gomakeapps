@@ -1,0 +1,31 @@
+@import "../../styles/common.scss";
+
+// mobile requirements styling
+.requirementsMobile {
+  &__container {
+    margin-top: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+  }
+
+  &__item {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    color: $color-blue-dark;
+
+    &--increase,
+    &--descrease {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      cursor: pointer;
+
+      border-radius: $border-radius;
+      box-shadow: $box-shadow-dark;
+    }
+  }
+}

@@ -9,6 +9,7 @@ import CtaProjectNeeds from "./CtaProjectNeeds"; // component for page 2.
 import logo from "../../images/form/logo.png";
 
 import style from "../../styles/components/Cta.module.scss";
+import MobileRequirements from "./Requirements/Mobile";
 
 // main CTA component which combines all other components
 const Cta = (props) => {
@@ -48,7 +49,15 @@ const Cta = (props) => {
           QUEL EST CE <span>SUPER PROJET</span> QUE VOUS ENVISAGEZ ?
         </h1>
       </div>
-      <div className={style["cta__form"]}>
+      <div
+        className={style["cta__form"]}
+        style={{
+          backgroundColor:
+            currentCtaNumber < 3 && currentCtaNumber < 6 ? "#f1f4ff" : "#fff",
+          boxShadow:
+            currentCtaNumber > 0 ? "0 0.1rem 1rem rgb(1, 65, 248, .8)" : "",
+        }}
+      >
         <form>
           <div className={style["cta__basicDetails"]}>
             {isInitialPage && <CtaBasicDetails />}
@@ -59,6 +68,7 @@ const Cta = (props) => {
           <div className={style["cta__projectNeeds"]}>
             {currentCtaNumber === 2 && <CtaProjectNeeds />}
           </div>
+          <div>{currentCtaNumber === 3 && <MobileRequirements />}</div>
           <div className={style["cta__form--button"]}>
             <button
               type="button"

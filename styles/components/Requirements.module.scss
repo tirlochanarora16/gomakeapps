@@ -29,3 +29,43 @@
     }
   }
 }
+
+// web requirements styling
+.requirementsWeb {
+  p {
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 70%;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+
+  &__item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2rem;
+    color: #0039ff;
+
+    p {
+      font-size: 1.75rem;
+    }
+
+    &--increase,
+    &--descrease {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      cursor: pointer;
+
+      border-radius: $border-radius;
+      box-shadow: $box-shadow-dark;
+    }
+  }
+}

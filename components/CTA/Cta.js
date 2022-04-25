@@ -5,11 +5,12 @@ import { CtaContext } from "../../context/ctaContext";
 import CtaBasicDetails from "./CtaBasicDetails"; // component for Page 0.
 import CtaTextArea from "./CtaTextArea"; // component for page 1.
 import CtaProjectNeeds from "./CtaProjectNeeds"; // component for page 2.
+import MobileRequirements from "./Requirements/Mobile"; // component for page 3
+import WebRequirement from "./Requirements/Web"; // component for page 4
 
 import logo from "../../images/form/logo.png";
 
 import style from "../../styles/components/Cta.module.scss";
-import MobileRequirements from "./Requirements/Mobile";
 
 // main CTA component which combines all other components
 const Cta = (props) => {
@@ -68,7 +69,12 @@ const Cta = (props) => {
           <div className={style["cta__projectNeeds"]}>
             {currentCtaNumber === 2 && <CtaProjectNeeds />}
           </div>
-          <div>{currentCtaNumber === 3 && <MobileRequirements />}</div>
+          <div className={style["cta__mobileRequirements"]}>
+            {currentCtaNumber === 3 && <MobileRequirements />}
+          </div>
+          <div className={style["cta__webRequirements"]}>
+            {currentCtaNumber === 4 && <WebRequirement />}
+          </div>
           <div className={style["cta__form--button"]}>
             <button
               type="button"

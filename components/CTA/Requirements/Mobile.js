@@ -16,21 +16,21 @@ const MobileRequirementsItem = ({ text, id }) => {
   const decreaseCountHandler = useMobile(setCount, count, "decrease");
 
   return (
-    <div className={style["requirementsMobile__item"]} id={id}>
+    <div className={style["requirements__item"]} id={id}>
       <div
-        className={style["requirementsMobile__item--descrease"]}
+        className={style["requirements__item--descrease"]}
         onClick={decreaseCountHandler}
       >
         -
       </div>
-      <div className={style["requirementsMobile__item--count"]}>{count}</div>
+      <div className={style["requirements__item--count"]}>{count}</div>
       <div
-        className={style["requirementsMobile__item--increase"]}
+        className={style["requirements__item--increase"]}
         onClick={increaseCountHandler}
       >
         +
       </div>
-      <p className={style["requirementsMobile__item--name"]}>{text}</p>
+      <p className={style["requirements__item--name"]}>{text}</p>
     </div>
   );
 };

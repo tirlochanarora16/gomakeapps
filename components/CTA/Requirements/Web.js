@@ -18,21 +18,21 @@ const WebRequirement = () => {
         Combien de Plateforme Web avez vous besoin de créer ?
       </p>
       <div className={style["requirementsWeb__container"]}>
-        <div className={style["requirementsWeb__item"]} id="webPlatformsCount">
+        <div className={style["requirements__item"]} id="webPlatformsCount">
           <div
-            className={style["requirementsWeb__item--descrease"]}
+            className={style["requirements__item--descrease"]}
             onClick={decrementCountHandler}
           >
             -
           </div>
-          <div className={style["requirementsWeb__item--count"]}>{count}</div>
+          <div className={style["requirements__item--count"]}>{count}</div>
           <div
-            className={style["requirementsWeb__item--increase"]}
+            className={style["requirements__item--increase"]}
             onClick={incrementCountHandler}
           >
             +
           </div>
-          <p>Plateforme Web</p>
+          <p className={style["requirements__item--name"]}>Plateforme Web</p>
         </div>
       </div>
     </div>

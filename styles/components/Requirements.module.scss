@@ -1,16 +1,9 @@
 @import "../../styles/common.scss";
 
-// mobile requirements styling
-.requirementsMobile {
-  &__container {
-    margin-top: 2rem;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 2rem;
-  }
-
+.requirements {
   &__item {
+    flex: 1;
+
     padding: 2rem;
     display: flex;
     justify-content: space-around;
@@ -30,6 +23,17 @@
   }
 }
 
+// mobile requirements styling
+.requirementsMobile {
+  &__container {
+    margin-top: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+  }
+}
+
 // web requirements styling
 .requirementsWeb {
   p {
@@ -44,28 +48,5 @@
     max-width: 70%;
     margin: 2rem auto;
     padding: 1rem;
-  }
-
-  &__item {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 2rem;
-    color: #0039ff;
-
-    p {
-      font-size: 1.75rem;
-    }
-
-    &--increase,
-    &--descrease {
-      font-size: 2rem;
-      padding: 1rem 2rem;
-      cursor: pointer;
-
-      border-radius: $border-radius;
-      box-shadow: $box-shadow-dark;
-    }
   }
 }

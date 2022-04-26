@@ -7,6 +7,7 @@ import CtaTextArea from "./CtaTextArea"; // component for page 1.
 import CtaProjectNeeds from "./CtaProjectNeeds"; // component for page 2.
 import MobileRequirements from "./Requirements/Mobile"; // component for page 3
 import WebRequirement from "./Requirements/Web"; // component for page 4
+import VideoRequirement from "./Requirements/Video"; // component for page 5.
 
 import logo from "../../images/form/logo.png";
 
@@ -74,6 +75,9 @@ const Cta = (props) => {
           </div>
           <div className={style["cta__webRequirements"]}>
             {currentCtaNumber === 4 && <WebRequirement />}
+          </div>
+          <div className={style["cta__videoRequirements"]}>
+            {currentCtaNumber === 5 && <VideoRequirement />}
           </div>
           <div className={style["cta__form--button"]}>
             <button

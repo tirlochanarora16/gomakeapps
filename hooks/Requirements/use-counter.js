@@ -4,7 +4,9 @@ import { CtaContext } from "../../context/ctaContext";
 
 const useCounter = (setCount, count, type) => {
   // importing form update state function from the context API
-  const { setCurrentFormData } = useContext(CtaContext);
+  const { currentFormData, setCurrentFormData } = useContext(CtaContext);
+
+  console.log(currentFormData);
 
   // using "if else" block to determine whether to increase the count or to decrease it
   if (type === "increase") {

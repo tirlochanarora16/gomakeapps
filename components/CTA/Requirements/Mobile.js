@@ -4,6 +4,7 @@ import useMobile from "../../../hooks/Requirements/use-mobile";
 
 import ctaStyle from "../../../styles/components/Cta.module.scss";
 import style from "../../../styles/components/Requirements.module.scss";
+import RequirementItem from "./Item";
 
 const MobileRequirementsItem = ({ text, id }) => {
   // setting a state for count
@@ -16,22 +17,13 @@ const MobileRequirementsItem = ({ text, id }) => {
   const decreaseCountHandler = useMobile(setCount, count, "decrease");
 
   return (
-    <div className={style["requirements__item"]} id={id}>
-      <div
-        className={style["requirements__item--descrease"]}
-        onClick={decreaseCountHandler}
-      >
-        -
-      </div>
-      <div className={style["requirements__item--count"]}>{count}</div>
-      <div
-        className={style["requirements__item--increase"]}
-        onClick={increaseCountHandler}
-      >
-        +
-      </div>
-      <p className={style["requirements__item--name"]}>{text}</p>
-    </div>
+    <RequirementItem
+      decrementCountHandler={decreaseCountHandler}
+      incrementCountHandler={increaseCountHandler}
+      text={text}
+      id={id}
+      count={count}
+    />
   );
 };
 

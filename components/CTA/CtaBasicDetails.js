@@ -2,7 +2,7 @@ import style from "../../styles/components/Cta.module.scss";
 import useCta from "../../hooks/use-cta";
 
 // component for CTA Input
-const CtaFormInput = ({ type, placeholder, id }) => {
+export const CtaFormInput = ({ type, placeholder, id }) => {
   // using the "useCta" hook to capture the form data
   const inputChangeHandler = useCta();
 

@@ -160,6 +160,24 @@
     }
   }
 
+  &__budget {
+    p {
+      text-align: center;
+    }
+
+    div {
+      margin-top: 1.5rem;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+      grid-gap: 2rem;
+
+      div {
+        justify-self: center;
+      }
+    }
+  }
+
   // cta question and text
   p.cta__question {
     justify-self: center;

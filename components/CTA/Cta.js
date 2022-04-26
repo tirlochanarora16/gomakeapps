@@ -13,6 +13,7 @@ import logo from "../../images/form/logo.png";
 
 import style from "../../styles/components/Cta.module.scss";
 import CtaBudget from "./CtaBudget";
+import CtaTotal from "./CtaTotal";
 
 // main CTA component which combines all other components
 const Cta = (props) => {
@@ -46,6 +47,10 @@ const Cta = (props) => {
     buttonText = "Commencer";
   } else if (currentCtaNumber === 6) {
     buttonText = "Étape finale";
+  } else if (currentCtaNumber === 7) {
+    buttonText = "Calculer le prix";
+  } else if (currentCtaNumber === 8) {
+    buttonText = 1600;
   } else {
     buttonText = "Suivant";
   }
@@ -95,6 +100,19 @@ const Cta = (props) => {
           <div className={style["cta__budget"]}>
             {currentCtaNumber === 6 && <CtaBudget />}
           </div>
+          <div className={style["cta__calculate"]}>
+            {currentCtaNumber === 7 && (
+              <div>
+                <p className={style["cta__question"]}>
+                  Selon les champs que vous avez remplis, votre projet
+                  repésenterait un montant de production d’environ :
+                </p>
+              </div>
+            )}
+          </div>
+          <div className={style["cta__total"]}>
+            {currentCtaNumber === 8 && <CtaTotal />}
+          </div>
           <div className={style["cta__form--button"]}>
             <button
               type="button"
@@ -109,6 +127,7 @@ const Cta = (props) => {
             </button>
             {isInitialPage && <p>Accéder au formulaire</p>}
             {currentCtaNumber === 6 && <p>Félicitations !</p>}
+            {currentCtaNumber === 8 && <p>Appeller au +33 7 50 50 21 31</p>}
           </div>
         </form>
       </div>

@@ -8,21 +8,46 @@ import CtaProjectNeeds from "./CtaProjectNeeds"; // component for page 2.
 import MobileRequirements from "./Requirements/Mobile"; // component for page 3
 import WebRequirement from "./Requirements/Web"; // component for page 4
 import VideoRequirement from "./Requirements/Video"; // component for page 5.
+import CtaBudget from "./CtaBudget";
+import CtaTotal from "./CtaTotal";
+import getStripe from "../../lib/getStripe";
 
 import logo from "../../images/form/logo.png";
 
 import style from "../../styles/components/Cta.module.scss";
-import CtaBudget from "./CtaBudget";
-import CtaTotal from "./CtaTotal";
 
 // main CTA component which combines all other components
 const Cta = (props) => {
   // importing all the required required variables and functions from the "CtaContext"
-  const { currentCtaNumber, setCurrentCtaNumber } = useContext(CtaContext);
+  const { currentCtaNumber, setCurrentCtaNumber, currentFormData } =
+    useContext(CtaContext);
+
+  const handleCheckout = async () => {
+    const stripe = await getStripe();
+
+    const response = await fetch("/api/stripe", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ currentFormData }),
+    });
+
+    if (response.status === 500) return;
+
+    const data = await response.json();
+
+    stripe.redirectToCheckout({ sessionId: data.id });
+  };
 
   // function to increment the "currentCtaNumber" on the click of the button
-  const incrementCtaPageHandler = () =>
-    setCurrentCtaNumber((currentCtaNumber += 1));
+  const incrementCtaPageHandler = () => {
+    if (currentCtaNumber < 8) {
+      setCurrentCtaNumber((currentCtaNumber += 1));
+    } else {
+      handleCheckout();
+    }
+  };
 
   // variable to hold cta text
   let ctaText = "";

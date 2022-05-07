@@ -6,7 +6,7 @@ const useCta = () => {
   // importing the context variables and functions
   const { currentFormData, setCurrentFormData } = useContext(CtaContext);
 
-  console.log(currentFormData);
+  // console.log(currentFormData);
 
   return (event) => {
     // console.log(event);
